@@ -4,3 +4,8 @@
 
 <h2>本文</h2>
 <p><%= @list.body %></p>
+<h2>画像</h2>
+<%= image_tag @list.image, size: "300x300" %>
+
+<%= link_to "編集", edit_list_path(@list.id) %>
+<%= link_to "削除", list_path(@list.id), method: :delete, "data-confium" => "本当に削除しますか?" %>
